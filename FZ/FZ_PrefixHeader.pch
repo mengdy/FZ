@@ -1,0 +1,26 @@
+//
+//  FZ_PrefixHeader.pch
+//  FZ
+//
+//  Created by mengdy on 17/2/17.
+//  Copyright © 2017年 mengdy. All rights reserved.
+//
+
+#ifndef FZ_PrefixHeader_pch
+#define FZ_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* FZ_PrefixHeader_pch */
+
+
+
+#ifdef DEBUG // 调试
+#define XMGLog(...)  NSLog(__VA_ARGS__)
+#else // 发布
+#define XMGLog(...)
+#endif
+
+/** RGB颜色值 带参数 */
+#define kColor(r,g,b,a) [UIColor colorWithRed:(r/255.0f) green:(g/255.0f) blue:(b/255.0f) alpha:a]
